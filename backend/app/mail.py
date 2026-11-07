@@ -1,6 +1,7 @@
 import logging
 import smtplib
 from email.message import EmailMessage
+from email.utils import formatdate
 
 from .config import settings
 from .models import Reservation
@@ -16,6 +17,7 @@ def send_confirmation(r: Reservation, pdf: bytes | None) -> None:
     msg["From"] = settings.mail_from
     msg["To"] = r.email
     msg["Reply-To"] = settings.mail_contact
+    msg["Date"] = formatdate(localtime=True)
 
     lines = [
         f"Bonjour {r.first_name} {r.last_name},",
