@@ -15,3 +15,6 @@ frontend/dist/
 *.tsbuildinfo
 .cache/
 .npm/
+
+# SSH deploy key (loto user home is /opt/loto)
+.ssh/
