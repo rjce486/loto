@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic[email]
+pydantic-settings
+sqlalchemy
+qrbill
+svglib
+reportlab
+httpx
+itsdangerous
